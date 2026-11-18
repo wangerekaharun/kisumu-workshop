@@ -31,6 +31,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.kisumu.market.R
 import dev.kisumu.market.data.Catalogue
@@ -92,5 +93,29 @@ private fun ProductRow(product: Product, onClick: () -> Unit) {
       Text(formatPrice(product.priceKsh, product.unit), style = MaterialTheme.typography.labelLarge)
     }
     Text("★ ${product.rating}", style = MaterialTheme.typography.labelMedium)
+  }
+}
+
+/** Renders without a phone: `android preview render`. */
+@Preview(showBackground = true, widthDp = 360)
+@Composable
+private fun ProductRowPreview() {
+  MaterialTheme {
+    ProductRow(
+      product =
+        Product(
+          id = 1,
+          name = "Tilapia",
+          category = "fish",
+          seller = "Mama Akinyi",
+          market = "Kibuye",
+          priceKsh = 450,
+          unit = "kg",
+          rating = 4.6,
+          tags = listOf("fresh", "lake"),
+          description = "Fresh from Lake Victoria this morning.",
+        ),
+      onClick = {},
+    )
   }
 }
