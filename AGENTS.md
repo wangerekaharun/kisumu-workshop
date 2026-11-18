@@ -28,5 +28,6 @@ There is no Android Studio here. Use the `android` CLI and the Gradle wrapper.
 - After every change, build the release APK and run `android analyze`. Report the numbers before and
   after.
 - Before saying a change works, clear the crash log (`adb logcat -b crash -c`), open each screen
-  once with the `--es screen` command above (market, detail and tips), then check
-  `adb logcat -d -b crash` shows no crash. Don't tap through the app by hand.
+  once with the `--es screen` command above (market, detail and tips), fling the market list for
+  20 seconds with the `adb shell input swipe` command above, then check `adb logcat -d -b crash` shows
+  no crash. Don't tap through the app by hand.
