@@ -4,6 +4,16 @@ The app for the DevFest Kisumu 2026 workshop, "Engineering memory-performant And
 Android app smaller and faster with the Android CLI, Google's Android skills and an AI agent, then
 prove it with numbers.
 
+## Why this matters
+
+Tuning R8 keep rules, baseline profiles, hunting memory leaks and tracing slow starts used to need
+specialists, weeks of work, and often a platform team that most teams don't have. Now you can point
+your agent at the app: the Android CLI gives it the tools, Google's Android skills give it the
+know-how, and you check the numbers. It works with the agent you already use, such as Antigravity,
+Claude Code or Codex. A small team can now do what only big teams could.
+
+## Follow along
+
 You can follow it on your own. Each step says what to run and what you should see. The answers are in
 the folded "What we found" sections, so try each step before you open them.
 
